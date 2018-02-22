@@ -1,0 +1,16 @@
+.custom-img {
+  color: #fff;
+  width: 100%;
+}
+.card {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.btn-search {
+  background-color: #009587;
+  color: black;
+  width: 100px;
+  margin-left: 10px;
+  border: none;
+}

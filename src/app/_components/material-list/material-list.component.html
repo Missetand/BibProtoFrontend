@@ -1,0 +1,25 @@
+<div class="input-group">
+  <input class="form-control" [(ngModel)]="queryString" id="search"
+         placeholder="Søg efter titel, forfatter, emneord eller ISBN nummer!">
+  <button class="btn-dark btn-search">Søg</button>
+</div>
+    <div *ngFor="let material of materials | FilterPipe: queryString" class="card">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h4 class="card-title">{{material.name}}</h4>
+            <p class="card-text">{{material.resume}}</p>
+            <p class="card-text">Forfatter: {{material.forfatter}}</p>
+            <p class="card-text status">Lånestatus: {{material.status}}</p>
+            <a href="#" class="btn btn-primary btn-custom">Reserver</a>
+            <a href="#" class="btn btn-primary btn-custom">Tilføj til kurv</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-img-bottom">
+            <img class="custom-img" src={{material.imagePath}}>
+          </div>
+        </div>
+      </div>
+    </div>
+
